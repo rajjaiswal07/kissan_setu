@@ -9,6 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kissan_setu">
+        <activity android:name=".about_us"></activity>
+        <activity android:name=".status" />
+        <activity android:name=".locations" />
+        <activity android:name=".grains" />
+        <activity android:name=".spices" />
+        <activity android:name=".fruits" />
+        <activity android:name=".vegetables" />
+        <activity android:name=".products" />
+        <activity android:name=".contact_us" />
+        <activity android:name=".settings" />
+        <activity android:name=".profile" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
