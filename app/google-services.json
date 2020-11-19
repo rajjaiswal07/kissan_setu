@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "681417955650",
+    "firebase_url": "https://kissan-setu.firebaseio.com",
+    "project_id": "kissan-setu",
+    "storage_bucket": "kissan-setu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681417955650:android:01987d47f6b0dbaed050db",
+        "android_client_info": {
+          "package_name": "com.example.kissan_setu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681417955650-t012cqed6o8c3mdecl3ttl3snv02udrk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kissan_setu",
+            "certificate_hash": "f63ccd2674d7920d6243f23deff118585666d799"
+          }
+        },
+        {
+          "client_id": "681417955650-3voi4vrh44dbu5iv57segg0sgfq5dpdk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6GPaRx_Z4LtGCknHn5zDnBl-wSGwe5TE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681417955650-3voi4vrh44dbu5iv57segg0sgfq5dpdk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

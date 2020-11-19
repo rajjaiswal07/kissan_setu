@@ -45,8 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.products:
                 Toast.makeText(this, "Products is selected", Toast.LENGTH_SHORT).show();
-                Intent intent4 = new Intent(MainActivity.this,products.class);
-                startActivity(intent4);
                 return true;
             case R.id.vegetables:
                 Toast.makeText(this, "Vegetables is selected", Toast.LENGTH_SHORT).show();
