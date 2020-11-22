@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kissan_setu">
-        <activity android:name=".registration"></activity>
+        <activity android:name=".companyRegistration"></activity>
+        <activity android:name=".companyLogin" />
+        <activity android:name=".registration" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity" />
         <activity android:name=".about_us" />

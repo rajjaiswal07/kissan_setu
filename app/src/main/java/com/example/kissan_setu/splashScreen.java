@@ -3,11 +3,14 @@ package com.example.kissan_setu;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -22,18 +25,47 @@ import com.google.firebase.database.ValueEventListener;
 import io.paperdb.Paper;
 
 public class splashScreen extends AppCompatActivity {
-    private static int SPLASH_TIME_OUT = 4000;
+//    private static int SPLASH_TIME_OUT = 4000;
+    private Button farmerLoginBtn;
+    private Button companyLoginButton;
     private ProgressDialog loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+//        ActionBar actionBar = getActionBar();
+//        actionBar.hide();
+
         loadingBar = new ProgressDialog(this);
-        Paper.init(this);
-        new Handler().postDelayed(new Runnable() {
+
+        // Farmer and Company Login Redirect
+        farmerLoginBtn = (Button) findViewById(R.id.farmer_login);
+        companyLoginButton = (Button) findViewById(R.id.company_login);
+
+        farmerLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View view) {
+                Intent intent1 = new Intent(splashScreen.this, Login.class);
+                    startActivity(intent1);
+//                    finish();
+            }
+        });
+
+        companyLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(splashScreen.this, companyLogin.class);
+                startActivity(intent2);
+//                finish();
+            }
+        });
+
+        //  Remember Me
+        Paper.init(this);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
                 String UserAdharKey = Paper.book().read(Prevalent.UserAdharKey);
                 String UserPasswordKey = Paper.book().read(Prevalent.UserPasswordKey);
                 if(UserAdharKey != null && UserPasswordKey != null) {
@@ -44,13 +76,14 @@ public class splashScreen extends AppCompatActivity {
                         loadingBar.setCanceledOnTouchOutside(false);
                         loadingBar.show();
                     }
-                } else {
-                    Intent homeIntent = new Intent(splashScreen.this, Login.class);
-                    startActivity(homeIntent);
-                    finish();
                 }
-            }
-        }, SPLASH_TIME_OUT);
+//                else {
+//                    Intent homeIntent = new Intent(splashScreen.this, Login.class);
+//                    startActivity(homeIntent);
+//                    finish();
+//                }
+//            }
+//        }, SPLASH_TIME_OUT);
     }
 
     private void AllowAccess(String adharNumber, String password) {
