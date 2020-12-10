@@ -75,7 +75,7 @@ public class registration extends AppCompatActivity {
         } else {
 
             loadingBar.setTitle("Create Account");
-            loadingBar.setMessage("Please wait, while we are cheking the credentials");
+            loadingBar.setMessage("Please wait, while we are checking the credentials");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
